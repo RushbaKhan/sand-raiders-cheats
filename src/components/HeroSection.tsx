@@ -44,25 +44,6 @@ export function HeroSection() {
 
       <div style={{
         position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        fontFamily: 'var(--font-display)',
-        fontSize: 'clamp(4rem, 14vw, 11rem)',
-        fontWeight: 900,
-        letterSpacing: '-0.02em',
-        textTransform: 'uppercase',
-        color: 'rgba(255,255,255,0.03)',
-        whiteSpace: 'nowrap',
-        zIndex: 4,
-        pointerEvents: 'none',
-        userSelect: 'none',
-      }}>
-        Best Of All
-      </div>
-
-      <div style={{
-        position: 'absolute',
         top: '20%',
         left: '-5%',
         width: 'clamp(300px, 50vw, 700px)',
