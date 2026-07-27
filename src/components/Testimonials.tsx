@@ -2,6 +2,8 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { BUY_URL } from '../seo/site';
 
 const MOBILE_MQ = '(max-width: 900px)';
+const SCROLL_SECTION_VH = 42;
+const CARD_PROGRESS_WINDOW = 0.95;
 
 export const CUSTOMER_REVIEWS = [
   { name: 'Sway', quote: 'Support solved my SAND loader issue quick and easy. Fast response times every time — ESP and aimbot run great in raids.', date: 'July 20, 2026' },
@@ -198,7 +200,7 @@ export function Testimonials() {
     setProgresses(
       CUSTOMER_REVIEWS.map((_, index) => {
         const threshold = index * step;
-        return Math.min(1, Math.max(0, (scrollProgress - threshold) / (step * 0.6)));
+        return Math.min(1, Math.max(0, (scrollProgress - threshold) / (step * CARD_PROGRESS_WINDOW)));
       })
     );
   }, [isMobile]);
@@ -269,7 +271,7 @@ export function Testimonials() {
       id="reviews"
       ref={sectionRef}
       className="testimonials-scroll-section"
-      style={{ minHeight: `${(CUSTOMER_REVIEWS.length + 2) * 30}vh` }}
+      style={{ minHeight: `${(CUSTOMER_REVIEWS.length + 2) * SCROLL_SECTION_VH}vh` }}
       aria-labelledby="testimonials-heading"
     >
       <div className="testimonials-sticky" style={padX}>
