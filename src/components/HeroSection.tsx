@@ -90,21 +90,34 @@ export function HeroSection() {
             fontWeight: 600,
             color: 'var(--accent-bright)',
             letterSpacing: '0.04em',
-          }}>Undetected · Active (4.9/5 Stars) · Updated for latest SAND patch</span>
+          }}>Legit ESP · BattlEye-safe · External</span>
         </div>
 
         <h1 style={{
           fontFamily: 'var(--font-display)',
-          fontSize: 'clamp(2.2rem, 6.5vw, 5rem)',
+          fontSize: 'clamp(2.4rem, 7vw, 5.5rem)',
           fontWeight: 900,
-          lineHeight: 1.05,
-          letterSpacing: '-0.01em',
-          color: 'var(--text-primary)',
-          marginBottom: 'clamp(10px, 2vw, 16px)',
-          maxWidth: '820px',
+          lineHeight: 1.02,
+          letterSpacing: '-0.02em',
+          marginBottom: 'clamp(16px, 2.5vw, 24px)',
+          maxWidth: '900px',
         }}>
-          SAND: RAIDERS OF SOPHIE Cheats —{' '}
-          <span className="gradient-text">Aimbot, ESP and more</span>
+          <span
+            className="gradient-text"
+            style={{ display: 'block' }}
+          >
+            SAND: RAIDERS OF SOPHIE
+          </span>
+          <span style={{
+            display: 'block',
+            marginTop: 'clamp(8px, 1.5vw, 14px)',
+            fontSize: 'clamp(1.35rem, 3.2vw, 2.25rem)',
+            fontWeight: 800,
+            letterSpacing: '0.04em',
+            color: 'var(--text-primary)',
+          }}>
+            AIMBOT, ESP & WALLHACK
+          </span>
         </h1>
 
         <p style={{
@@ -118,31 +131,12 @@ export function HeroSection() {
           Enhance your SAND: RAIDERS OF SOPHIE experience with premium cheat software featuring Aimbot, ESP, Wallhack, Triggerbot, Radar, Loot ESP, No Recoil, Stream-Proof mode, and Cloud-DMA support.
         </p>
 
-        <div style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '8px',
-          padding: '6px 14px',
-          background: 'rgba(168,85,247,0.08)',
-          border: '1px solid rgba(168,85,247,0.2)',
-          borderRadius: '100px',
-          marginBottom: 'clamp(20px, 3vw, 28px)',
-        }}>
-          <div style={{ display: 'flex', gap: '2px' }}>
-            {[0, 1, 2, 3, 4].map(i => (
-              <svg key={i} width="13" height="13" viewBox="0 0 24 24" fill="#fbbf24" stroke="none">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-              </svg>
-            ))}
-          </div>
-          <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
-            Active (4.9/5 Stars)
-          </span>
-        </div>
-
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: 'clamp(24px, 3vw, 32px)' }}>
           <a href={BUY_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
-            Get Cheats
+            Purchase Now
+          </a>
+          <a href="#pricing" className="btn-ghost">
+            See pricing & features
           </a>
           <a href="#esp" className="btn-ghost">
             See Features ↓
