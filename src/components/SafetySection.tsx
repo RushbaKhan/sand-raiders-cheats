@@ -1,6 +1,6 @@
 import { AnimatedSection } from './AnimatedSection';
 import { VideoEmbed } from './VideoEmbed';
-import { VIDEO_HERO } from '../seo/site';
+import { VIDEO_DEMO, VIDEO_HERO } from '../seo/site';
 
 export function SafetySection() {
   return (
@@ -60,6 +60,9 @@ export function SafetySection() {
           </div>
 
           <div className="safety-videos-col" style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '16px',
             position: 'relative',
           }}>
             <div style={{
@@ -79,8 +82,20 @@ export function SafetySection() {
             }}>
               <VideoEmbed
                 src={VIDEO_HERO}
-                ariaLabel="SAND Raiders of Sophie cheat gameplay demonstration"
+                ariaLabel="SAND Raiders undetected cheat — You Don't Get Banned"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </div>
+
+            <div style={{
+              width: '100%',
+              borderRadius: 'var(--radius-lg)',
+              border: '1px solid var(--border-ghost)',
+              overflow: 'hidden',
+            }}>
+              <VideoEmbed
+                src={VIDEO_DEMO}
+                ariaLabel="SAND Raiders ESP and aimbot cheat demonstration"
               />
             </div>
           </div>

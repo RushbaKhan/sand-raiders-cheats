@@ -6,6 +6,7 @@ export const BUY_URL = 'https://zadeyo.com/go/DEMON?to=%2Fproducts%2Fsand-raider
 export const LOGO_URL = 'https://zadeyo.com/_next/image?url=%2Frt-removebg-preview.png&w=64&q=75';
 export const OG_IMAGE = LOGO_URL;
 export const VIDEO_HERO = 'https://zadeyo.com/0724.mp4';
+export const VIDEO_DEMO = 'https://bryjchknhsrmjdunnfer.supabase.co/storage/v1/object/public/575/0510(3).mp4';
 
 export const SAND_SCREENSHOTS = [
   'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1431300/ss_945b69263e0ea57b7b8287e77fdd18548cb6e74e.1920x1080.jpg',
