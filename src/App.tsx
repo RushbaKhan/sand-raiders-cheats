@@ -9,7 +9,7 @@ import { DEFAULT_OG_IMAGE, Seo } from './components/Seo';
 import { CUSTOMER_REVIEWS } from './components/Testimonials';
 import { SmoothScroll } from './components/SmoothScroll';
 import { HOME_TITLE, HOME_DESCRIPTION } from './seo/constants';
-import { HOME_FAQ, LOGO_URL, SITE_NAME, SITE_URL } from './seo/site';
+import { HOME_FAQ, BUY_URL, LOGO_URL, SITE_NAME, SITE_URL } from './seo/site';
 import './globals.css';
 
 function toIsoDate(date: string) {
@@ -155,20 +155,35 @@ function RouteSeo() {
             name: SITE_NAME,
             url: SITE_URL,
             description: HOME_DESCRIPTION,
+            inLanguage: 'en-US',
             publisher: { '@type': 'Organization', name: SITE_NAME, logo: LOGO_URL },
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: `${SITE_URL}/blog?search={search_term_string}`,
+              'query-input': 'required name=search_term_string',
+            },
           },
           {
             '@type': 'WebPage',
+            '@id': `${SITE_URL}/#webpage`,
             name: HOME_TITLE,
             description: HOME_DESCRIPTION,
             url: `${SITE_URL}/`,
             inLanguage: 'en-US',
+            isPartOf: { '@type': 'WebSite', url: SITE_URL, name: SITE_NAME },
+          },
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+            ],
           },
           {
             '@type': 'Organization',
             name: SITE_NAME,
             url: SITE_URL,
             logo: LOGO_URL,
+            sameAs: [BUY_URL],
             aggregateRating: {
               '@type': 'AggregateRating',
               ratingValue: '4.9',
@@ -178,6 +193,55 @@ function RouteSeo() {
             },
           },
           {
+            '@type': 'SoftwareApplication',
+            name: 'SAND Raiders Cheats',
+            applicationCategory: 'GameApplication',
+            operatingSystem: 'Windows 10, Windows 11',
+            offers: {
+              '@type': 'Offer',
+              price: '40.00',
+              priceCurrency: 'USD',
+              availability: 'https://schema.org/InStock',
+              url: `${SITE_URL}/buy`,
+            },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '4.9',
+              ratingCount: '1847',
+              bestRating: '5',
+              worstRating: '1',
+            },
+          },
+          {
+            '@type': 'Product',
+            name: 'SAND Raiders Cheats',
+            description: HOME_DESCRIPTION,
+            brand: { '@type': 'Brand', name: SITE_NAME },
+            url: `${SITE_URL}/buy`,
+            offers: {
+              '@type': 'Offer',
+              price: '40.00',
+              priceCurrency: 'USD',
+              availability: 'https://schema.org/InStock',
+              url: `${SITE_URL}/buy`,
+            },
+          },
+          {
+            '@type': 'ItemList',
+            name: 'SAND Raiders Cheats Site Pages',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', url: `${SITE_URL}/` },
+              { '@type': 'ListItem', position: 2, name: 'Get SAND Cheats', url: `${SITE_URL}/buy` },
+              { '@type': 'ListItem', position: 3, name: 'Blog', url: `${SITE_URL}/blog` },
+              ...BLOG_POSTS.map((post, index) => ({
+                '@type': 'ListItem',
+                position: index + 4,
+                name: post.title,
+                url: `${SITE_URL}/blog/${post.slug}`,
+              })),
+            ],
+          },
+          {
             '@type': 'FAQPage',
             mainEntity: BUY_FAQ_ITEMS.map(item => ({
               '@type': 'Question',
@@ -185,7 +249,7 @@ function RouteSeo() {
               acceptedAnswer: { '@type': 'Answer', text: item.a },
             })),
           },
-          ...CUSTOMER_REVIEWS.map(review => ({
+          ...CUSTOMER_REVIEWS.slice(0, 5).map(review => ({
             '@type': 'Review',
             author: { '@type': 'Person', name: review.name },
             reviewRating: {
