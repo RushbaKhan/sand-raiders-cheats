@@ -5,8 +5,7 @@ import { HowItWorks } from '../components/HowItWorks';
 import { Integrations } from '../components/Integrations';
 import { SupportBanner } from '../components/SupportBanner';
 import { VideoShowcase } from '../components/VideoShowcase';
-import { PricingSection } from '../components/PricingSection';
-import { FaqSection } from '../components/FaqSection';
+import { PricingFaqSection } from '../components/PricingFaqSection';
 import { Testimonials } from '../components/Testimonials';
 import { DiscordSupport } from '../components/DiscordSupport';
 
@@ -20,8 +19,7 @@ export function HomePage() {
       <Integrations />
       <SupportBanner />
       <VideoShowcase />
-      <PricingSection />
-      <FaqSection />
+      <PricingFaqSection />
       <Testimonials />
       <DiscordSupport />
     </>
