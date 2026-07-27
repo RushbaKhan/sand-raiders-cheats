@@ -1,5 +1,5 @@
-import { VideoEmbed } from './VideoEmbed';
-import { BUY_URL, VIDEO_HERO } from '../seo/site';
+import { ScreenshotSlider } from './ScreenshotSlider';
+import { BUY_URL } from '../seo/site';
 
 export function HeroSection() {
   return (
@@ -21,11 +21,10 @@ export function HeroSection() {
         zIndex: 0,
         overflow: 'hidden',
       }}>
-        <VideoEmbed
-          src={VIDEO_HERO}
-          priority
-          ariaLabel="SAND Raiders of Sophie gameplay demonstration"
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        <ScreenshotSlider
+          interval={4000}
+          style={{ width: '100%', height: '100%' }}
+          imgStyle={{ position: 'absolute', height: '100%' }}
         />
       </div>
 
