@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { BUY_URL } from '../seo/site';
+import { SiteLogo } from './SiteLogo';
 
 const MOBILE_MQ = '(max-width: 920px)';
 
@@ -134,16 +135,8 @@ export function Navbar() {
           justifyContent: 'space-between',
           gap: '24px',
         }}>
-          <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <img
-              src="https://zadeyo.com/_next/image?url=%2Frt-removebg-preview.png&w=64&q=75"
-              alt="SAND Raiders Cheats logo"
-              width={32}
-              height={32}
-              loading="eager"
-              decoding="async"
-              style={{ borderRadius: '6px' }}
-            />
+          <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <SiteLogo size={36} loading="eager" />
             <span style={{
               fontFamily: 'var(--font-display)',
               fontWeight: 900,

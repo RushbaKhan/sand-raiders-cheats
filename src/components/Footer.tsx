@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { BUY_URL, SITE_NAME } from '../seo/site';
+import { SiteLogo } from './SiteLogo';
 
 const NAV = [
   { label: 'SAND Cheats Home', to: '/' as const },
@@ -30,16 +31,8 @@ export function Footer() {
           paddingBottom: 'clamp(28px, 4vw, 40px)',
         }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', minWidth: 'min(100%, 240px)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <img
-                src="https://zadeyo.com/_next/image?url=%2Frt-removebg-preview.png&w=64&q=75"
-                alt={`${SITE_NAME} logo`}
-                width={28}
-                height={28}
-                loading="lazy"
-                decoding="async"
-                style={{ borderRadius: '6px' }}
-              />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <SiteLogo size={36} />
               <span style={{
                 fontFamily: 'var(--font-display)',
                 fontWeight: 900,
