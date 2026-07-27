@@ -106,7 +106,7 @@ export function HeroSection() {
             className="gradient-text"
             style={{ display: 'block' }}
           >
-            SAND: RAIDERS OF SOPHIE
+            SAND: RAIDERS OF SOPHIE CHEATS
           </span>
           <span style={{
             display: 'block',

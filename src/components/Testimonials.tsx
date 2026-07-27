@@ -138,7 +138,7 @@ function ReviewsIntro() {
           className="btn-primary"
           style={{ padding: '14px 28px', fontSize: '0.875rem', width: '100%', maxWidth: 320 }}
         >
-          Get Cheats
+          Start with SAND Cheats
         </a>
       </div>
     </>

@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { BUY_URL, SITE_NAME } from '../seo/site';
 
 const NAV = [
-  { label: 'Home', to: '/' as const },
-  { label: 'Blogs', to: '/blog' as const },
+  { label: 'SAND Cheats Home', to: '/' as const },
+  { label: 'Guides & Blog', to: '/blog' as const },
 ];
 
 const footLink = {
@@ -101,7 +101,27 @@ export function Footer() {
               onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-secondary)'; }}
               onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-muted)'; }}
             >
-              Get Cheats
+              Buy SAND Cheats
+            </a>
+            <a
+              href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsandraiderscheat.com%2F&text=SAND%20Raiders%20Cheats%20%E2%80%93%20Aimbot%2C%20ESP%20%26%20Wallhack"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ ...footLink }}
+              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-secondary)'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-muted)'; }}
+            >
+              Share on X
+            </a>
+            <a
+              href="https://www.reddit.com/submit?url=https%3A%2F%2Fsandraiderscheat.com%2F&title=SAND%20Raiders%20Cheats%20%E2%80%93%20Aimbot%2C%20ESP%20%26%20Wallhack"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ ...footLink }}
+              onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-secondary)'; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-muted)'; }}
+            >
+              Share on Reddit
             </a>
           </nav>
         </div>

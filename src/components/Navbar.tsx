@@ -7,7 +7,7 @@ const MOBILE_MQ = '(max-width: 920px)';
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
-  { label: 'Blogs', to: '/blog' },
+  { label: 'SAND Blog', to: '/blog' },
 ];
 
 export function Navbar() {
@@ -110,7 +110,7 @@ export function Navbar() {
               textAlign: 'center',
             }}
           >
-            Get Cheats
+            Purchase Now
           </a>
         </div>
       )}
@@ -199,7 +199,7 @@ export function Navbar() {
                   transition: 'transform 0.2s, box-shadow 0.2s',
                 }}
               >
-                Get Cheats
+                Purchase Now
               </a>
             )}
 
