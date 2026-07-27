@@ -50,7 +50,7 @@ export function Footer() {
                 WebkitBackgroundClip: 'text',
                 backgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
-              }}>SAND</span>
+              }}>SAND Cheats</span>
             </div>
             <p style={{
               fontFamily: 'var(--font-body)',

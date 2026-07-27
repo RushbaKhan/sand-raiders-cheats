@@ -1,7 +1,6 @@
 import { AnimatedSection } from './AnimatedSection';
-import { ScreenshotSlider } from './ScreenshotSlider';
 import { VideoEmbed } from './VideoEmbed';
-import { VIDEO_FEATURES } from '../seo/site';
+import { VIDEO_HERO } from '../seo/site';
 
 export function SafetySection() {
   return (
@@ -61,9 +60,6 @@ export function SafetySection() {
           </div>
 
           <div className="safety-videos-col" style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '16px',
             position: 'relative',
           }}>
             <div style={{
@@ -81,21 +77,10 @@ export function SafetySection() {
               aspectRatio: '16/9',
               position: 'relative',
             }}>
-              <ScreenshotSlider
-                interval={3500}
-                style={{ width: '100%', height: '100%' }}
-              />
-            </div>
-
-            <div style={{
-              width: '100%',
-              borderRadius: 'var(--radius-lg)',
-              border: '1px solid var(--border-ghost)',
-              overflow: 'hidden',
-            }}>
               <VideoEmbed
-                src={VIDEO_FEATURES}
-                ariaLabel="SAND Raiders cheat safety and ESP preview"
+                src={VIDEO_HERO}
+                ariaLabel="SAND Raiders of Sophie cheat gameplay demonstration"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
           </div>

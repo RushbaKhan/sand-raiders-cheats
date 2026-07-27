@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { AnimatedSection } from '../components/AnimatedSection';
 import { VideoEmbed } from '../components/VideoEmbed';
-import { BUY_URL, HOME_FAQ, VIDEO_FEATURES, VIDEO_HERO } from '../seo/site';
+import { ScreenshotSlider } from '../components/ScreenshotSlider';
+import { BUY_URL, HOME_FAQ, VIDEO_HERO } from '../seo/site';
 
 const espFeatures = [
   { label: 'Box, Snapline & Skeleton', desc: 'Players ESP through walls with full bone structure rendering.' },
@@ -397,7 +398,7 @@ export function StorePage() {
             color: 'var(--text-primary)',
             marginBottom: '16px',
             textAlign: 'center',
-          }}>SAND ESP &amp; Wallhack Demo</h2>
+          }}>SAND: Raiders of Sophie Screenshots</h2>
           <p style={{
             fontFamily: 'var(--font-body)',
             fontSize: '0.95rem',
@@ -406,15 +407,16 @@ export function StorePage() {
             marginBottom: '32px',
             maxWidth: '600px',
             margin: '0 auto 32px',
-          }}>Full ESP visibility through walls. See players, loot, and objectives before they see you.</p>
+          }}>Desert raids, trampler mechs, and extraction zones — the world where SAND cheats dominate.</p>
           <div style={{
             borderRadius: 'var(--radius-lg)',
             overflow: 'hidden',
             border: '1px solid var(--border-ghost)',
+            aspectRatio: '16/9',
           }}>
-            <VideoEmbed
-              src={VIDEO_FEATURES}
-              ariaLabel="SAND wallhack ESP demonstration"
+            <ScreenshotSlider
+              interval={4000}
+              style={{ width: '100%', height: '100%' }}
             />
           </div>
         </div>

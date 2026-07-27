@@ -45,6 +45,25 @@ export function HeroSection() {
 
       <div style={{
         position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        fontFamily: 'var(--font-display)',
+        fontSize: 'clamp(4rem, 14vw, 11rem)',
+        fontWeight: 900,
+        letterSpacing: '-0.02em',
+        textTransform: 'uppercase',
+        color: 'rgba(255,255,255,0.03)',
+        whiteSpace: 'nowrap',
+        zIndex: 4,
+        pointerEvents: 'none',
+        userSelect: 'none',
+      }}>
+        Best Of All
+      </div>
+
+      <div style={{
+        position: 'absolute',
         top: '20%',
         left: '-5%',
         width: 'clamp(300px, 50vw, 700px)',
@@ -96,16 +115,16 @@ export function HeroSection() {
 
         <h1 style={{
           fontFamily: 'var(--font-display)',
-          fontSize: 'clamp(2.8rem, 8vw, 6rem)',
+          fontSize: 'clamp(2.2rem, 6.5vw, 5rem)',
           fontWeight: 900,
-          lineHeight: 1.0,
+          lineHeight: 1.05,
           letterSpacing: '-0.01em',
           color: 'var(--text-primary)',
           marginBottom: 'clamp(10px, 2vw, 16px)',
-          maxWidth: '700px',
+          maxWidth: '820px',
         }}>
-          Dominate SAND: RAIDERS OF SOPHIE{' '}
-          <span className="gradient-text">effortlessly</span>
+          SAND: RAIDERS OF SOPHIE Cheats —{' '}
+          <span className="gradient-text">Aimbot, ESP and more</span>
         </h1>
 
         <p style={{

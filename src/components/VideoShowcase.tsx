@@ -1,12 +1,11 @@
 import { AnimatedSection } from './AnimatedSection';
-import { VideoEmbed } from './VideoEmbed';
-import { VIDEO_FEATURES } from '../seo/site';
+import { ScreenshotSlider } from './ScreenshotSlider';
 
 export function VideoShowcase() {
   return (
     <AnimatedSection>
       <section
-        aria-label="SAND Raiders gameplay preview"
+        aria-label="SAND Raiders of Sophie screenshots"
         style={{
           background: 'var(--bg-base)',
           padding: 'clamp(48px, 7vw, 80px) max(16px, env(safe-area-inset-right), 4vw) clamp(48px, 7vw, 80px) max(16px, env(safe-area-inset-left), 4vw)',
@@ -15,7 +14,7 @@ export function VideoShowcase() {
         <div style={{ maxWidth: 1280, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 'clamp(24px, 4vw, 36px)' }}>
             <span className="section-label" style={{ marginBottom: '16px', justifyContent: 'center', display: 'flex' }}>
-              Gameplay Preview
+              SAND: Raiders of Sophie
             </span>
             <h2 style={{
               fontFamily: 'var(--font-display)',
@@ -25,8 +24,8 @@ export function VideoShowcase() {
               lineHeight: 1.1,
               marginBottom: '12px',
             }}>
-              SAND Raiders ESP &amp; Aimbot{' '}
-              <span className="gradient-text">In Action</span>
+              Official Game{' '}
+              <span className="gradient-text">Screenshots</span>
             </h2>
             <p style={{
               fontFamily: 'var(--font-body)',
@@ -36,7 +35,7 @@ export function VideoShowcase() {
               margin: '0 auto',
               lineHeight: 1.65,
             }}>
-              Watch undetected SAND cheats featuring wallhack ESP, 2D radar, triggerbot, and loot ESP in real raid gameplay.
+              Explore the desert raids, trampler mechs, and extraction zones where SAND Raiders cheats give you the edge.
             </p>
           </div>
           <div style={{
@@ -46,10 +45,9 @@ export function VideoShowcase() {
             aspectRatio: '16/9',
             background: 'var(--bg-void)',
           }}>
-            <VideoEmbed
-              src={VIDEO_FEATURES}
-              ariaLabel="SAND Raiders cheat demonstration with ESP and aimbot"
-              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            <ScreenshotSlider
+              interval={4000}
+              style={{ width: '100%', height: '100%' }}
             />
           </div>
         </div>
