@@ -502,6 +502,9 @@ button:focus-visible {
   .safety-split-grid {
     grid-template-columns: 1fr !important;
   }
+  .pricing-faq-grid {
+    grid-template-columns: 1fr !important;
+  }
   .safety-videos-col {
     order: -1;
     min-height: min(42dvh, 380px);

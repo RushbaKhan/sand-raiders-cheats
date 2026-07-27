@@ -46,11 +46,18 @@ export function Footer() {
                 fontSize: '1.25rem',
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
-                background: 'linear-gradient(135deg, #c084fc 0%, #a855f7 60%, #7c3aed 100%)',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-              }}>SAND</span>
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+              }}>
+                <span style={{
+                  background: 'linear-gradient(135deg, #c084fc 0%, #a855f7 60%, #7c3aed 100%)',
+                  WebkitBackgroundClip: 'text',
+                  backgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}>SAND</span>
+                <span style={{ color: '#ffffff' }}>Cheats</span>
+              </span>
             </div>
             <p style={{
               fontFamily: 'var(--font-body)',

@@ -1,3 +1,5 @@
+import { SAND_SCREENSHOTS } from './site';
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -16,7 +18,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Guide',
     date: 'July 20, 2026',
     readTime: '8 min read',
-    image: 'https://images.pexels.com/photos/7915437/pexels-photo-7915437.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: SAND_SCREENSHOTS[0],
     excerpt:
       'A complete look at SAND Raiders cheats — what ESP and aimbot claims mean, where the risks sit, and what to check before putting an account at stake in SAND: Raiders of Sophie.',
     body: `
@@ -49,7 +51,7 @@ The smartest competitive advantage is one you can keep. Learn the raid flow, tig
     category: 'ESP',
     date: 'July 18, 2026',
     readTime: '7 min read',
-    image: 'https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: SAND_SCREENSHOTS[1],
     excerpt:
       'Learn how SAND ESP works — box ESP, skeleton lines, health and armor display, loot ESP, glow intensity, team filters, and maximum distance control for SAND: Raiders of Sophie raids.',
     body: `
@@ -84,7 +86,7 @@ External cheats read game memory from a separate process rather than injecting i
     category: 'Aimbot',
     date: 'July 16, 2026',
     readTime: '8 min read',
-    image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: SAND_SCREENSHOTS[2],
     excerpt:
       'Configure a SAND aimbot that feels natural — customizable hotkey, bone selection, dynamic FOV, smoothing, visibility check, and focus team settings for SAND: Raiders of Sophie.',
     body: `
@@ -115,7 +117,7 @@ Triggerbot fires automatically when your crosshair contacts an enemy hitbox. Add
     category: 'Guide',
     date: 'July 14, 2026',
     readTime: '6 min read',
-    image: 'https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: SAND_SCREENSHOTS[3],
     excerpt:
       'Optimal SAND Raiders cheat settings for raid extraction, PvP fights, and stream-proof gameplay — radar size, ESP colors, aimbot smoothing, and spectator protection.',
     body: `
@@ -149,7 +151,7 @@ For maximum isolation, the AWS Cloud-DMA option runs the cheat on remote hardwar
     category: 'Guide',
     date: 'July 12, 2026',
     readTime: '7 min read',
-    image: 'https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: SAND_SCREENSHOTS[4],
     excerpt:
       'How Cloud-DMA works for SAND Raiders cheats — AWS remote execution, external overlay delivery, and why DMA architecture reduces local detection surface.',
     body: `
@@ -181,7 +183,7 @@ Cloud-DMA adds latency compared to local external cheats. Network interruptions 
     category: 'ESP',
     date: 'July 10, 2026',
     readTime: '6 min read',
-    image: 'https://images.pexels.com/photos/777564/pexels-photo-777564.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: SAND_SCREENSHOTS[0],
     excerpt:
       'Technical breakdown of how SAND ESP reads player positions, renders wallhack boxes, and displays loot — external cheat architecture for SAND: Raiders of Sophie.',
     body: `
@@ -210,7 +212,7 @@ Because rendering happens outside the game process, most users report minimal FP
     category: 'Safety',
     date: 'July 8, 2026',
     readTime: '7 min read',
-    image: 'https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: SAND_SCREENSHOTS[1],
     excerpt:
       'Stay safe with SAND Raiders cheats — BattlEye undetected status, stream-proof mode, screenshot protection, spectator detection, and how to evaluate cheat security risks.',
     body: `
@@ -239,7 +241,7 @@ No cheat is 100% safe forever. Game updates, report systems, and manual review a
     category: 'Guide',
     date: 'July 6, 2026',
     readTime: '5 min read',
-    image: 'https://images.pexels.com/photos/21067/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800',
+    image: SAND_SCREENSHOTS[2],
     excerpt:
       'What to do when SAND: Raiders of Sophie updates — auto-update loader, compatibility checks, Windows 10/11 support, and Intel/AMD configuration after patches.',
     body: `

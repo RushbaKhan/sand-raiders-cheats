@@ -148,13 +148,20 @@ export function Navbar() {
               fontFamily: 'var(--font-display)',
               fontWeight: 900,
               fontSize: '1.1rem',
-              letterSpacing: '0.08em',
+              letterSpacing: '0.06em',
               textTransform: 'uppercase',
-              background: 'linear-gradient(135deg, #c084fc 0%, #a855f7 60%, #7c3aed 100%)',
-              WebkitBackgroundClip: 'text',
-              backgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}>SAND</span>
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+            }}>
+              <span style={{
+                background: 'linear-gradient(135deg, #c084fc 0%, #a855f7 60%, #7c3aed 100%)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+              }}>SAND</span>
+              <span style={{ color: '#ffffff' }}>Cheats</span>
+            </span>
           </Link>
 
           {!isMobile && (

@@ -1,10 +1,5 @@
 import { useState, useEffect } from 'react';
-
-const SCREENSHOTS = [
-  'https://images.igdb.com/igdb/image/upload/t_screenshot_huge/hvajyimmb0u0wy4w2usv.jpg',
-  'https://images.igdb.com/igdb/image/upload/t_screenshot_huge/n1kotviezoyo7vlafvns.jpg',
-  'https://images.igdb.com/igdb/image/upload/t_screenshot_huge/vhkxsic40inhce1oiqbn.jpg',
-];
+import { SAND_SCREENSHOTS } from '../seo/site';
 
 interface ScreenshotSliderProps {
   interval?: number;
@@ -20,7 +15,7 @@ export function ScreenshotSlider({ interval = 3500, style, imgStyle }: Screensho
     const id = setInterval(() => {
       setActive(cur => {
         setPrev(cur);
-        return (cur + 1) % SCREENSHOTS.length;
+        return (cur + 1) % SAND_SCREENSHOTS.length;
       });
     }, interval);
     return () => clearInterval(id);
@@ -28,12 +23,12 @@ export function ScreenshotSlider({ interval = 3500, style, imgStyle }: Screensho
 
   return (
     <div style={{ position: 'relative', overflow: 'hidden', ...style }}>
-      {SCREENSHOTS.map((src, i) => (
+      {SAND_SCREENSHOTS.map((src, i) => (
         <img
           key={src}
           src={src}
-          alt={`SAND Raiders cheat screenshot ${i + 1} — ESP aimbot wallhack`}
-          loading="lazy"
+          alt={`SAND: Raiders of Sophie screenshot ${i + 1} — desert raid gameplay`}
+          loading={i === 0 ? 'eager' : 'lazy'}
           decoding="async"
           style={{
             position: i === 0 ? 'relative' : 'absolute',
@@ -52,7 +47,6 @@ export function ScreenshotSlider({ interval = 3500, style, imgStyle }: Screensho
         />
       ))}
 
-      {/* Dot indicators */}
       <div style={{
         position: 'absolute',
         bottom: '12px',
@@ -62,9 +56,10 @@ export function ScreenshotSlider({ interval = 3500, style, imgStyle }: Screensho
         gap: '6px',
         zIndex: 10,
       }}>
-        {SCREENSHOTS.map((_, i) => (
+        {SAND_SCREENSHOTS.map((_, i) => (
           <button
             key={i}
+            aria-label={`Show screenshot ${i + 1}`}
             onClick={() => { setPrev(active); setActive(i); }}
             style={{
               width: i === active ? 20 : 6,

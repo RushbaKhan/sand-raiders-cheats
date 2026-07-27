@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { AnimatedSection } from './AnimatedSection';
-import { VideoEmbed } from './VideoEmbed';
-import { VIDEO_FEATURES } from '../seo/site';
+import { ScreenshotSlider } from './ScreenshotSlider';
 
 const espFeatures = [
   { name: 'Box, Snapline & Skeleton', desc: 'Players ESP through walls with box outlines, snaplines, and full bone structure for precise tracking.', icon: (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>) },
@@ -229,16 +228,33 @@ export function FeaturesGrid() {
       }}>
         <div style={{ maxWidth: 960, margin: '0 auto' }}>
           <AnimatedSection>
+            <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+              <h3 style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(1.3rem, 3vw, 1.6rem)',
+                fontWeight: 800,
+                color: 'var(--text-primary)',
+                marginBottom: '8px',
+              }}>
+                SAND: Raiders of Sophie <span className="gradient-text">In-Game</span>
+              </h3>
+              <p style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '0.9rem',
+                color: 'var(--text-secondary)',
+              }}>
+                Real screenshots from SAND desert raids and trampler combat.
+              </p>
+            </div>
             <div style={{
               borderRadius: 'var(--radius-lg)',
               overflow: 'hidden',
               border: '1px solid var(--border-ghost)',
               aspectRatio: '16/9',
             }}>
-              <VideoEmbed
-                src={VIDEO_FEATURES}
-                ariaLabel="SAND wallhack ESP and radar feature demonstration"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              <ScreenshotSlider
+                interval={4000}
+                style={{ width: '100%', height: '100%' }}
               />
             </div>
           </AnimatedSection>

@@ -1,7 +1,6 @@
 import { AnimatedSection } from './AnimatedSection';
-import { ScreenshotSlider } from './ScreenshotSlider';
 import { VideoEmbed } from './VideoEmbed';
-import { VIDEO_FEATURES } from '../seo/site';
+import { VIDEO_DEMO, VIDEO_HERO } from '../seo/site';
 
 export function SafetySection() {
   return (
@@ -81,9 +80,10 @@ export function SafetySection() {
               aspectRatio: '16/9',
               position: 'relative',
             }}>
-              <ScreenshotSlider
-                interval={3500}
-                style={{ width: '100%', height: '100%' }}
+              <VideoEmbed
+                src={VIDEO_HERO}
+                ariaLabel="SAND Raiders undetected cheat — You Don't Get Banned"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
             </div>
 
@@ -94,8 +94,8 @@ export function SafetySection() {
               overflow: 'hidden',
             }}>
               <VideoEmbed
-                src={VIDEO_FEATURES}
-                ariaLabel="SAND Raiders cheat safety and ESP preview"
+                src={VIDEO_DEMO}
+                ariaLabel="SAND Raiders ESP and aimbot cheat demonstration"
               />
             </div>
           </div>

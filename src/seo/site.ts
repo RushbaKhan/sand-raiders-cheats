@@ -6,7 +6,15 @@ export const BUY_URL = 'https://zadeyo.com/go/DEMON?to=%2Fproducts%2Fsand-raider
 export const LOGO_URL = 'https://zadeyo.com/_next/image?url=%2Frt-removebg-preview.png&w=64&q=75';
 export const OG_IMAGE = LOGO_URL;
 export const VIDEO_HERO = 'https://zadeyo.com/0724.mp4';
-export const VIDEO_FEATURES = 'https://bryjchknhsrmjdunnfer.supabase.co/storage/v1/object/public/575/0510(3).mp4';
+export const VIDEO_DEMO = 'https://bryjchknhsrmjdunnfer.supabase.co/storage/v1/object/public/575/0510(3).mp4';
+
+export const SAND_SCREENSHOTS = [
+  'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1431300/ss_945b69263e0ea57b7b8287e77fdd18548cb6e74e.1920x1080.jpg',
+  'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1431300/ss_ae984445e249b9c74aee69933232ac6126a58446.1920x1080.jpg',
+  'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1431300/ss_9e0c42a7967a7fc8df4c0cb3659feae399d402eb.1920x1080.jpg',
+  'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1431300/ss_ad24479533c6095853a9fb4533643469cde8b467.1920x1080.jpg',
+  'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1431300/ss_ba46bc4972e34f1a1918b16fe2d7d7dde8f6d19d.1920x1080.jpg',
+] as const;
 
 export const PRIMARY_KEYWORDS = [
   'SAND Raiders Cheats',

@@ -1,5 +1,5 @@
-import { VideoEmbed } from './VideoEmbed';
-import { BUY_URL, VIDEO_HERO } from '../seo/site';
+import { ScreenshotSlider } from './ScreenshotSlider';
+import { BUY_URL } from '../seo/site';
 
 export function HeroSection() {
   return (
@@ -21,11 +21,10 @@ export function HeroSection() {
         zIndex: 0,
         overflow: 'hidden',
       }}>
-        <VideoEmbed
-          src={VIDEO_HERO}
-          priority
-          ariaLabel="SAND Raiders of Sophie gameplay demonstration"
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        <ScreenshotSlider
+          interval={4000}
+          style={{ width: '100%', height: '100%' }}
+          imgStyle={{ position: 'absolute', height: '100%' }}
         />
       </div>
 
@@ -96,16 +95,16 @@ export function HeroSection() {
 
         <h1 style={{
           fontFamily: 'var(--font-display)',
-          fontSize: 'clamp(2.8rem, 8vw, 6rem)',
+          fontSize: 'clamp(2.2rem, 6.5vw, 5rem)',
           fontWeight: 900,
-          lineHeight: 1.0,
+          lineHeight: 1.05,
           letterSpacing: '-0.01em',
           color: 'var(--text-primary)',
           marginBottom: 'clamp(10px, 2vw, 16px)',
-          maxWidth: '700px',
+          maxWidth: '820px',
         }}>
-          Dominate SAND: RAIDERS OF SOPHIE{' '}
-          <span className="gradient-text">effortlessly</span>
+          SAND: RAIDERS OF SOPHIE Cheats —{' '}
+          <span className="gradient-text">Aimbot, ESP and more</span>
         </h1>
 
         <p style={{
