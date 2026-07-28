@@ -5,7 +5,7 @@ export const GAME_NAME = 'SAND: RAIDERS OF SOPHIE';
 export const BUY_URL = 'https://zadeyo.com/go/DEMON?to=%2Fproducts%2Fsand-raiders-of-sophie';
 export const LOGO_URL = `${SITE_URL}/logo.webp`;
 export const FAVICON_URL = `${SITE_URL}/favicon.ico`;
-export const OG_IMAGE = `${SITE_URL}/favicon-192.png`;
+export const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 export const INDEXNOW_KEY = '7f3c9a2e-1b4d-4e8f-9c6a-2d5e8f-1a3b7c';
 export const VIDEO_HERO = 'https://zadeyo.com/0724.mp4';
 export const VIDEO_DEMO = 'https://bryjchknhsrmjdunnfer.supabase.co/storage/v1/object/public/575/0510(3).mp4';

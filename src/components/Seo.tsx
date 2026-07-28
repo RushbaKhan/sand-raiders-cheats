@@ -68,6 +68,12 @@ export function Seo({
     upsertMeta('meta[property="og:title"]', { property: 'og:title', content: title });
     upsertMeta('meta[property="og:description"]', { property: 'og:description', content: description });
     upsertMeta('meta[property="og:image"]', { property: 'og:image', content: imageUrl });
+    upsertMeta('meta[property="og:image:width"]', { property: 'og:image:width', content: '1200' });
+    upsertMeta('meta[property="og:image:height"]', { property: 'og:image:height', content: '630' });
+    upsertMeta('meta[property="og:image:alt"]', {
+      property: 'og:image:alt',
+      content: 'SAND Raiders Cheats logo — Aimbot, ESP and Wallhack',
+    });
     upsertMeta('meta[property="og:site_name"]', { property: 'og:site_name', content: SITE_NAME });
     upsertMeta('meta[property="og:locale"]', { property: 'og:locale', content: 'en_US' });
     upsertMeta('meta[name="twitter:card"]', { name: 'twitter:card', content: 'summary_large_image' });
