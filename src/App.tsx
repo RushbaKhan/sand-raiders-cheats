@@ -9,7 +9,8 @@ import { DEFAULT_OG_IMAGE, Seo } from './components/Seo';
 import { CUSTOMER_REVIEWS } from './components/Testimonials';
 import { SmoothScroll } from './components/SmoothScroll';
 import { HOME_TITLE, HOME_DESCRIPTION } from './seo/constants';
-import { HOME_FAQ, BUY_URL, LOGO_URL, SITE_NAME, SITE_URL } from './seo/site';
+import { HOME_FAQ, BUY_URL, LOGO_URL, OG_IMAGE, SITE_NAME, SITE_URL } from './seo/site';
+import { buildProductSchema, PRODUCT_OFFER } from './seo/product-schema';
 import './globals.css';
 
 function toIsoDate(date: string) {
@@ -101,26 +102,10 @@ function RouteSeo() {
         structuredData={{
           '@context': 'https://schema.org',
           '@graph': [
-            {
-              '@type': 'Product',
-              name: 'SAND Raiders Cheats Subscription',
-              description: 'Undetected SAND Raiders cheat with aimbot, ESP, triggerbot, wallhack, radar, and loot ESP',
-              brand: { '@type': 'Brand', name: SITE_NAME },
-              offers: {
-                '@type': 'Offer',
-                price: '40.00',
-                priceCurrency: 'USD',
-                priceValidUntil: '2026-12-31',
-                availability: 'https://schema.org/InStock',
-                url: `${SITE_URL}/buy`,
-                seller: { '@type': 'Organization', name: SITE_NAME },
-              },
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '4.9',
-                ratingCount: '1847',
-              },
-            },
+            buildProductSchema(
+              'SAND Raiders Cheats Subscription',
+              'Undetected SAND Raiders cheat with aimbot, ESP, triggerbot, wallhack, radar, and loot ESP',
+            ),
             {
               '@type': 'FAQPage',
               mainEntity: BUY_FAQ_ITEMS.map(item => ({
@@ -197,13 +182,8 @@ function RouteSeo() {
             name: 'SAND Raiders Cheats',
             applicationCategory: 'GameApplication',
             operatingSystem: 'Windows 10, Windows 11',
-            offers: {
-              '@type': 'Offer',
-              price: '40.00',
-              priceCurrency: 'USD',
-              availability: 'https://schema.org/InStock',
-              url: `${SITE_URL}/buy`,
-            },
+            image: OG_IMAGE,
+            offers: PRODUCT_OFFER,
             aggregateRating: {
               '@type': 'AggregateRating',
               ratingValue: '4.9',
@@ -212,20 +192,7 @@ function RouteSeo() {
               worstRating: '1',
             },
           },
-          {
-            '@type': 'Product',
-            name: 'SAND Raiders Cheats',
-            description: HOME_DESCRIPTION,
-            brand: { '@type': 'Brand', name: SITE_NAME },
-            url: `${SITE_URL}/buy`,
-            offers: {
-              '@type': 'Offer',
-              price: '40.00',
-              priceCurrency: 'USD',
-              availability: 'https://schema.org/InStock',
-              url: `${SITE_URL}/buy`,
-            },
-          },
+          buildProductSchema('SAND Raiders Cheats', HOME_DESCRIPTION),
           {
             '@type': 'ItemList',
             name: 'SAND Raiders Cheats Site Pages',
