@@ -2,7 +2,7 @@ export const SITE_URL = 'https://sandraiderscheat.com';
 export const SITE_NAME = 'SAND Raiders Cheats';
 export const SITE_SHORT_NAME = 'SAND Raiders';
 export const GAME_NAME = 'SAND: RAIDERS OF SOPHIE';
-export const BUY_URL = 'https://zadeyo.com/go/DEMON?to=%2Fproducts%2Fsand-raiders-of-sophie';
+export const BUY_URL = 'https://zadeyo.com/go/RUSHBA?to=%2Fproducts%2Fsand-raiders-of-sophie';
 export const LOGO_URL = `${SITE_URL}/logo.webp`;
 export const FAVICON_URL = `${SITE_URL}/favicon.ico`;
 export const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
