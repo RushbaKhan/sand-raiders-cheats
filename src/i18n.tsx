@@ -263,14 +263,13 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     document.documentElement.lang = newLang;
     document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
     updateMetaTags(newLang);
-    updateHreflangLinks();
   };
 
   useEffect(() => {
+    stripLangQueryFromUrl();
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     updateMetaTags(lang);
-    updateHreflangLinks();
   }, []);
 
   const t = (key: string): string => {
@@ -307,20 +306,13 @@ function updateMetaTags(lang: string) {
   if (twDesc) twDesc.setAttribute('content', description);
 }
 
-function updateHreflangLinks() {
+function stripLangQueryFromUrl() {
   document.querySelectorAll('link[hreflang]').forEach(el => el.remove());
-  const base = 'https://sandraiderscheat.com';
-  const head = document.head;
-  LANGUAGES.forEach(({ code }) => {
-    const link = document.createElement('link');
-    link.rel = 'alternate';
-    link.setAttribute('hreflang', code);
-    link.href = `${base}/?lang=${code}`;
-    head.appendChild(link);
-  });
-  const xDefault = document.createElement('link');
-  xDefault.rel = 'alternate';
-  xDefault.setAttribute('hreflang', 'x-default');
-  xDefault.href = base + '/';
-  head.appendChild(xDefault);
+
+  const url = new URL(window.location.href);
+  if (!url.searchParams.has('lang')) return;
+
+  url.searchParams.delete('lang');
+  const next = `${url.pathname}${url.search}${url.hash}`;
+  window.history.replaceState(window.history.state, '', next || '/');
 }
