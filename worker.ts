@@ -18,6 +18,16 @@ function canonicalRedirect(request: Request): Response | null {
   return null;
 }
 
+function stripLangQueryRedirect(request: Request): Response | null {
+  const url = new URL(request.url);
+  if (!url.searchParams.has('lang')) {
+    return null;
+  }
+
+  url.searchParams.delete('lang');
+  return Response.redirect(url.toString(), 301);
+}
+
 function withHtmlCharset(response: Response): Response {
   const contentType = response.headers.get('content-type') ?? '';
   if (!contentType.includes('text/html')) {
@@ -38,6 +48,11 @@ export default {
     const redirect = canonicalRedirect(request);
     if (redirect) {
       return redirect;
+    }
+
+    const langRedirect = stripLangQueryRedirect(request);
+    if (langRedirect) {
+      return langRedirect;
     }
 
     const response = await env.ASSETS.fetch(request);

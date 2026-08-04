@@ -2,6 +2,14 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var url = new URL(location.href);
+        if (!url.searchParams.has('lang')) return;
+        url.searchParams.delete('lang');
+        history.replaceState(history.state, '', (url.pathname + url.search + url.hash) || '/');
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>SAND Raiders Cheats – Undetected Aimbot, ESP &amp; Wallhack</title>
     <meta name="description" content="SAND Raiders cheats with undetected aimbot, ESP, triggerbot, wallhack &amp; radar. Stream-proof, BattlEye safe. Updated every patch." />
